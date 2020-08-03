@@ -21,10 +21,20 @@ export class TodoItem extends Component {
                 <p>
                     <input type="checkbox" onChange={this.props.markComplete.bind(this,id)}/> {' '}
                     {title}
+                    <button onClick={this.props.delItem.bind(this,id)} style={delBtnStyle}>X</button>
                 </p>
+
             </div>
         )
     }
+}
+
+const delBtnStyle = {
+    background: 'red',
+    color: '#ffff',
+    border: 'none',
+    padding: '5px 10px',
+    float: 'right'
 }
 
 //Proptypes
