@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export class TodoItem extends Component {
+class TodoItem extends Component {
 
     getStyle = () =>{
         return{
@@ -15,7 +15,7 @@ export class TodoItem extends Component {
 
     render() {
 
-        const { id, title} = this.props.todo
+        const { id, title} = this.props.todo  //destructuring props
         return (
             <div style={this.getStyle()}>
                 <p>
